@@ -1,4 +1,4 @@
-# ODI-Project
+#ODI-Project
 
 ## Introduction
 
@@ -18,26 +18,53 @@ In R, after reading in our new cleaned dataset, I utilised the "tidyverse" and "
 
 We first looked at the number of matches each team had won over the span of the 21 years of data provided to us by the dataset and then refined our search to just include teams which had won 100 or more matches. We then used ggplot to visulize our outputs and made minor improvements such as tilting our x labels slightly to account for longer country names and to improve the overall appearance of the graphics.
 
-![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/e88f39ec-8a74-42c2-a0ad-66baef9942ca)
+![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/2da745be-8ecb-4ab7-8a7d-847cd98f6a42)
 
-![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/d7faccde-f542-43a8-9162-d7405c27bccf)
+![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/49c2f623-1375-4a7d-96fa-80dc292bee67)
 
-We next looked at the cities in which these matches took place and then looked at which cities hosted a large number of matches compared to other cities. 
+We next looked at the cities in which these matches took place and then looked at which cities hosted a large number of matches compared to other cities. For this we extracted distinct city names and counted the number of matches each city hosted. To obtain our top cities, we sliced the results to obtain the top 10 cities by the number of matches they hosted. 
 
-![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/fb4ba249-ef12-4e79-8b7c-aed06a8ffcfb)
+![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/6b3608ee-cfb2-49e1-b2f8-d4066ea9e225)
 
-Finally we looked at the toss. We focused on how teams faired in the match after winning the toss and look at whether teams decided to bat or bowl and how that impacted there performance. 
+Next we looked at the toss. We focused on how teams faired in the match after winning the toss, did they win or lose?
 
+![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/24c67836-80e6-400e-965e-0cdb49125f13)
+
+Finally, we are interested in further exploring the condition where a team wins the toss and wins the match. We generated a plot to make an estimation as to whether a given team wins more matches when the choose to bat first or field first. 
+
+![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/12dc3afd-f200-4c6d-9105-d74b3c25b272)
+
+We generated another plot here, a percentage stacked bar chart to show the percentage a given team wins a game depending on whether they elected to bat or bowl first.
+
+![image](https://github.com/AdvaitABhide/ODI-Project/assets/152935633/cb6836ef-633e-4dbe-b220-3a97ec31bc11)
 
 ## Findings and Future Exploration
 
 ### Findings
 - We found that only 9 teams had won more than 100 matches out of a possible 27 teans and that only 5 of those 9 had won at least 200 matches. India tops the countries on wins with 290 wins and Australia trail slightly behind at 275 wins. 
 - In total there was 145 different venues in which matches had occurred and we ended up seeing that a large majority of venues only hosted 1 match while the top 10 venues hosted 34 or more. The top 3 venues hosted 89, 87 and 83 respective matches. 
-- 
+- Teams seemed to win more games if they elected to field first but some teams didn't seem to follow the pattern. A few teams did fair better batting first including some of the world's best teams over the last 21 years such as Australia, Pakistan or South Africa.
+- Australia in particuarly only got 27% of their wins from fielding first with the rest 73% coming from matches were they elected to bat first. 
 
 ### Future Exploration
 It is important to note that the game of cricket is vast in nature and modern cricket can provide us with a myriad of statistics we can use to analyse and further improve on the game. 
 
 - The dataset as well, we could have looked at the umpires and seen who umpired the most games and possibly used the output to determine if there was any sort of human error or bias affecting the matches.
-- The dataset also contains information on the player of the match for each match which could show the best players in cricket in the ODI format. This could potentially open the door for research on what makes them so good and how coaches, teams, players could use their techniques, lifestyles, etc in their own play. 
+- The dataset also contains information on the player of the match for each match which could show the best players in cricket in the ODI format. This could potentially open the door for research on what makes them so good and how coaches, teams, players could use their techniques, lifestyles, etc in their own play.
+
+## Dependencies
+
+- For this analysis I utilised Microsoft Excel and RStudio running on R version 4.2.2. One may also use Python if they so wish.
+
+## How To Use
+
+- In this github repository, you will find the Cleaned excel file and .R file I utilised. The .R file has comments throughout the script which will help any user navigate through the file script with relative ease.
+- Please make sure you read in the libraries with the codes given at the top. If you don't have the tidyverse package installed, please make sure to do so prior to reading in the library code.
+- Make sure to set the working directory the same as the folder in which you have the cleaned excel file.   
+
+## Contributing
+
+- Any contributions to this dataset and analysis is welcomed and greatly appericated.
+- As a suggestion for anyone up to the task, one may look at the other formats of cricket, T20 and Test cricket and analysis data for those formats if they wished. This can be done for either International or Regional/National level cricket.
+
+## 
